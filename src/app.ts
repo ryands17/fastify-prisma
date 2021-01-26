@@ -21,4 +21,4 @@ app.get('/user', async (_, res) => {
   }
 })
 
-export { app }
+export { app, prisma }
