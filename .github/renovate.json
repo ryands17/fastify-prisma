@@ -1,20 +1,22 @@
 {
   "extends": ["config:base"],
   "masterIssue": true,
-  "automerge": true,
-  "schedule": ["every 2 weeks on Monday"],
+  "schedule": ["every 3 weeks on Thursday"],
   "packageRules": [
     {
       "packagePatterns": ["@prisma/*"],
-      "groupName": "prisma"
+      "groupName": "prisma",
+      "automerge": true
     },
     {
       "packagePatterns": ["^@types/", "typesync"],
-      "groupName": "ts-types"
+      "groupName": "ts-types",
+      "automerge": true
     },
     {
       "packagePatterns": [".*jest.*", "supertest"],
-      "groupName": "test-utils"
+      "groupName": "test-utils",
+      "automerge": true
     }
   ]
 }

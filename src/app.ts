@@ -1,24 +1,18 @@
 import { PrismaClient } from '@prisma/client'
 import { fastify } from 'fastify'
-import { isDev } from './utils'
+import cors from 'fastify-cors'
+import helmet from 'fastify-helmet'
+import { isDev, envs } from './utils'
+import { router } from './routes'
 
 const app = fastify({
   logger: { level: isDev() ? 'info' : 'warn' },
 })
 
+app.register(helmet)
+app.register(cors, { credentials: true, origin: envs.CORS_HOST })
+app.register(router)
+
 const prisma = new PrismaClient()
-
-app.get('/health', (_, res) => {
-  res.status(200).send()
-})
-
-app.get('/user', async (_, res) => {
-  try {
-    res.send({ data: { users: await prisma.user.findMany() } })
-  } catch (e) {
-    console.log('/user', e)
-    res.status(500).send({ error: 'Failed to fetch users' })
-  }
-})
 
 export { app, prisma }
