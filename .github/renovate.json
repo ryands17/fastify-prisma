@@ -1,8 +1,21 @@
 {
   "extends": ["config:base"],
   "masterIssue": true,
-  "schedule": ["every 3 weeks on Thursday"],
+  "schedule": ["every 1 month on the first day of the month"],
   "packageRules": [
+    {
+      "matchUpdateTypes": [
+        "major",
+        "minor",
+        "patch",
+        "pin",
+        "digest",
+        "lockFileMaintenance",
+        "rollback",
+        "bump"
+      ],
+      "automerge": true
+    },
     {
       "packagePatterns": ["@prisma/*"],
       "groupName": "prisma",

@@ -1,4 +1,5 @@
-import { app, prisma } from '../src/app'
+import { app } from '../src/app'
+import { prisma } from '../src/helpers/utils'
 
 beforeAll(async done => {
   await app.ready()

@@ -27,8 +27,7 @@ class PrismaTestEnvironment extends NodeEnvironment {
 
   async setup() {
     // Run the migrations to ensure our schema has the required structure
-    await exec(`yarn db:migrate:prod`)
-    await exec(`yarn db:seed`)
+    await exec(`yarn prisma db push --preview-feature`)
     return super.setup()
   }
 

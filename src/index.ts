@@ -1,5 +1,5 @@
 import { app } from './app'
-import { envs } from './utils'
+import { envs } from './helpers/utils'
 
 const start = async () => {
   await app.listen(envs.PORT)

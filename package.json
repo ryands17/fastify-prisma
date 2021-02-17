@@ -8,7 +8,7 @@
     "dev": "nodemon src/index.ts",
     "build": "tsc",
     "start": "node dist/index.js",
-    "test": "jest",
+    "test": "dotenv -e .env.test -- jest",
     "db:save": "prisma migrate dev --create-only --preview-feature",
     "db:migrate": "prisma migrate dev --preview-feature",
     "db:migrate:prod": "prisma migrate deploy --preview-feature",
@@ -20,15 +20,20 @@
   "license": "ISC",
   "dependencies": {
     "@prisma/client": "2.16.1",
+    "bcrypt": "5.0.0",
     "fastify": "3.12.0",
     "fastify-cors": "^5.2.0",
-    "fastify-helmet": "^5.2.0"
+    "fastify-helmet": "^5.2.0",
+    "jsonwebtoken": "^8.5.1"
   },
   "devDependencies": {
+    "@types/bcrypt": "10.0.28-alpha",
+    "@types/jsonwebtoken": "^8.5.0",
     "@types/node": "14.14.28",
     "@types/nodemon": "1.19.0",
     "@types/prettier": "2.2.1",
     "@types/supertest": "2.0.10",
+    "dotenv-cli": "^4.0.0",
     "husky": "5",
     "jest": "26.6.3",
     "jest-environment-node": "26.6.2",
