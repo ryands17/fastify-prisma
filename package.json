@@ -19,7 +19,7 @@
   "author": "Ryan",
   "license": "ISC",
   "dependencies": {
-    "@prisma/client": "2.16.1",
+    "@prisma/client": "2.17.0",
     "bcrypt": "5.0.0",
     "fastify": "3.12.0",
     "fastify-cors": "5.2.0",
