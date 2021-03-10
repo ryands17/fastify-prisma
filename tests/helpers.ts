@@ -7,8 +7,8 @@ beforeAll(async done => {
 })
 
 afterAll(async done => {
-  await prisma.$disconnect()
   await app.close()
+  await prisma.$disconnect()
   done()
 })
 
