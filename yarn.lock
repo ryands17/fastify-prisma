@@ -5203,10 +5203,10 @@ union-value@^1.0.0:
     is-extendable "^0.1.1"
     set-value "^2.0.1"
 
-unique-names-generator@4.4.0:
-  version "4.4.0"
-  resolved "https://registry.yarnpkg.com/unique-names-generator/-/unique-names-generator-4.4.0.tgz#8adc33aaff899beaa36247965090bb154370df3f"
-  integrity sha512-0noP+m59TGwolNqnmXfiqMA5KiTudIk6D0VgzNkk2C1Jv3Lr+sY3T07nEWBg8Uq92/FjGca1klsRR6CXFriqFw==
+unique-names-generator@4.5.0:
+  version "4.5.0"
+  resolved "https://registry.yarnpkg.com/unique-names-generator/-/unique-names-generator-4.5.0.tgz#0da9bb5fe2bd4b86cd52c852cb4669e31fdf7e81"
+  integrity sha512-GaiWvo3rKIHi1SyYP8/9cDrPMPSwEiYDUo2p0NQHeCHDXzLn8P6p8bttSS3lX7HHS3Yl5vnw/ulybO4GN85CgQ==
 
 unique-string@^2.0.0:
   version "2.0.0"
