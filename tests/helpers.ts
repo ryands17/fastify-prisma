@@ -1,15 +1,13 @@
 import { app } from '../src/app'
 import { prisma } from '../src/helpers/utils'
 
-beforeAll(async done => {
-  await app.ready()
-  done()
+beforeAll(async () => {
+  return app.ready()
 })
 
-afterAll(async done => {
+afterAll(async () => {
   await app.close()
-  await prisma.$disconnect()
-  done()
+  return prisma.$disconnect()
 })
 
 export { app }
