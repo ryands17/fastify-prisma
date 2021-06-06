@@ -28,6 +28,7 @@
   },
   "devDependencies": {
     "@types/bcrypt": "10.0.28-alpha",
+    "@types/jest": "^26.0.23",
     "@types/jsonwebtoken": "8.5.1",
     "@types/node": "15.12.1",
     "@types/nodemon": "1.19.0",
