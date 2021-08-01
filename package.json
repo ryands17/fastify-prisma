@@ -35,7 +35,7 @@
     "@types/prettier": "2.3.1",
     "@types/supertest": "2.0.11",
     "dotenv-cli": "4.0.0",
-    "husky": "7.0.0",
+    "husky": "7.0.1",
     "jest": "27.0.6",
     "jest-environment-node": "27.0.6",
     "lint-staged": "11.0.0",
