@@ -39,7 +39,7 @@
     "jest": "27.0.6",
     "jest-environment-node": "27.0.6",
     "lint-staged": "11.0.0",
-    "nodemon": "2.0.9",
+    "nodemon": "2.0.12",
     "prettier": "2.3.2",
     "prisma": "2.26.0",
     "supertest": "6.1.3",
