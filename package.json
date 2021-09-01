@@ -38,7 +38,7 @@
     "husky": "7.0.2",
     "jest": "27.0.6",
     "jest-environment-node": "27.0.6",
-    "lint-staged": "11.1.1",
+    "lint-staged": "11.1.2",
     "nodemon": "2.0.12",
     "prettier": "2.3.2",
     "prisma": "2.28.0",
