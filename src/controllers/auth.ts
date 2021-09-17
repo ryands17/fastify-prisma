@@ -17,7 +17,7 @@ export const signup: RouteHandlerMethod = async (req, res) => {
     })
 
     res.send({ data: { user } })
-  } catch (error) {
+  } catch (error: any) {
     res.status(400).send({ error: `User already exists!` })
     logError('signup', error)
   }
@@ -41,7 +41,7 @@ export const login: RouteHandlerMethod = async (req, res) => {
     return res.send({
       data: { user: data, accessToken: await createAccessToken(data) },
     })
-  } catch (error) {
+  } catch (error: any) {
     res.status(500).send({ error: 'Server error!' })
     logError('login', error)
   }
