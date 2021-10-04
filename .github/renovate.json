@@ -17,7 +17,7 @@
       "automerge": true
     },
     {
-      "packagePatterns": ["@prisma/*"],
+      "packagePatterns": ["prisma", "@prisma/client"],
       "groupName": "prisma",
       "automerge": true
     },

@@ -28,18 +28,12 @@ class PrismaTestEnvironment extends NodeEnvironment {
   async setup() {
     // Push the state from your Prisma schema to your database (create tables & columns)
     await exec(`yarn prisma db push --preview-feature`)
-    
-    // While `prisma db push` is great for prototyping it doesn't record the history of your migrations
-    // See https://www.prisma.io/docs/reference/api-reference/command-reference#db-push
-    // For migrations history use `prisma migrate`, see https://www.prisma.io/docs/concepts/components/prisma-migrate
-    // After running `prisma migrate dev --preview-feature`, comment the previous `db push` command and uncomment the following line 
-    // await exec(`yarn prisma migrate deploy --preview-feature`)
-    
+
     return super.setup()
   }
 
   async teardown() {
-    await this.client.$executeRaw(
+    await this.client.$executeRawUnsafe(
       `drop schema if exists "${this.schema}" cascade`
     )
     await this.client.$disconnect()
